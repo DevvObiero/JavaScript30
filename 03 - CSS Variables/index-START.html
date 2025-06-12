@@ -44,7 +44,7 @@
       width: 100px;
     }
     :root{
-      --base: #ffc600;
+      --base: #c47611;
       --spacing: 10px;
       --blur: 10px; 
     }
@@ -61,7 +61,17 @@
   </style>
 
   <script>
-    
+    const inputs  =  document.querySelectorAll('.controls input');
+    function handleUpdate(){
+// console.log(this.value) 
+const suffix  =  this.dataset.sizing || ''; 
+document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+}
+
+    inputs.forEach(input => {
+      input.addEventListener('change', handleUpdate);
+      input.addEventListener('mousemove', handleUpdate);
+    });
   </script>
 
 </body>
