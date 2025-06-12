@@ -19,7 +19,7 @@
     <input id="base" type="color" name="base" value="#ffc600">
   </div>
 
-  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  <img src="https://images.pexels.com/photos/32417557/pexels-photo-32417557/free-photo-of-charming-antique-shop-in-paris-display-window.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
 
   <style>
 
@@ -43,9 +43,25 @@
     input {
       width: 100px;
     }
+    :root{
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px; 
+    }
+
+    img{
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: block;
+      padding: var(--spacing);
+      filter: blur(var(--blur)) brightness(1.2);
+      box-shadow: 0 0 0 10px var(--base);
+    }
   </style>
 
   <script>
+    
   </script>
 
 </body>
